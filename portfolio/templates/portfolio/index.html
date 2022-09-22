@@ -1,10 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h2>HELLO!</h2>
-</body>
-</html>
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'portfolio/css/home-styles.css' %}"
+{% endblock %}
+
+{% block content %}
+        <section id="about-me">
+       <div class="flex flex-1">
+           <div class="about-me__info row">
+               <div class="about-me__info--container">
+                   <figure class="about-me__picture--mask">
+                       <img src="{% static 'portfolio/images/me.png' %}" class="about-me__picture" alt="Karol Kurek">
+                   </figure>
+                   <h1 class="about-me__info--title">Hi! I'm <span class="text--purple">Karol Kurek</span>&nbsp;<span class="wave">👋</span></h1>
+                   <p class="about-me__info--para">
+                       I'm a <strong class="text--purple">junior fullstack python 🐍 developer </strong>
+                       with a strong passion for building websites.
+                       Both backend and frontend give me a lot of satisfaction, so I associate the future with them.
+                       Learn more about me <a href="{% url 'about' %}">here</a>.
+                   </p>
+                   <div class="about-me__links">
+                       <a href="https://www.linkedin.com/in/karol-kurek/" class="about-me__link">
+                           <i class="fab fa-linkedin-in"></i>
+                       </a>
+                       <a href="https://github.com/kurekhombre" class="about-me__link">
+                           <i class="fab fa-github"></i>
+                       </a>
+                       <a href="https://m.me/drainedsb" class="about-me__link">
+                           <i class="fab fa-facebook-messenger"></i>
+                       </a>
+                       <a href="{% static 'portfolio/files/Karol_Kurek_Resume.pdf' %}" target="_blank" class="about-me__link">
+                           <i class="fas fa-file-pdf"></i>
+                       </a>
+                   </div>
+               </div>
+               <figure class="about-me__img--container">
+                   <img src="{% static 'portfolio/images/undraw_programming.svg' %}" class="about-me__img" alt="Undraw - Programming">
+               </figure>
+
+           </div>
+       </div>
+    </section>
+<section id="technologies">
+    <div class="container reveal">
+        <div class="row">
+            <h2 class="section__title"><span class="text--purple">Tools</span>  and <span class="text--purple">Technologies</span> I use as developer</h2>
+            <div class="technology__list">
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png" alt="Python logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">Python</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/2880px-Django_logo.svg.png" alt="Django logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">Django</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/920px-Flask_logo.svg.png" alt="Flask logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">Flask</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikiversity/en/8/8c/FastAPI_logo.png?20211121151501" alt="FastAPI logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">FastAPI</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="HTML logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">HTML</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/1200px-CSS3_logo.svg.png" alt="CSS logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">CSS</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png" alt="Bootstrap logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">Bootstrap</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">JavaScript</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="PostgreSQL logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">PostgreSQL</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://www.svgrepo.com/show/303232/mongodb-logo.svg" alt="MongoDB logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">MongoDB</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://variwiki.com/images/archive/a/a1/20190926132947%21Docker.png" alt="Docker logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">Docker</span>
+                </div>
+                <div class="technology">
+                    <figure class="technology__img--wraper">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/1200px-NewTux.svg.png" alt="Linux logo" class="technology__img">
+                    </figure>
+                    <span class="technology__name">Linux</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="projects">
+    <div class="container reveal">
+        <div class="row">
+            <h2 class="section__title">My last <span class="text--purple">projects</span></h2>
+            <ul class="project__list">
+            {% for project in last_projects %}
+                <li class="project">
+                    <div class="project__wrapper">
+                        <img src="{{ project.image.url }}" class="project__img" alt="{{ project.title }} Demo">
+                        <div class="project__description">
+                            <h3 class="project__description--title">{{ project.title }}</h3>
+                            <h4 class="project__description--sub-title">
+                                {% if project.technologies %}
+                                {% for technology in project.technologies.all %}
+                                {{ technology.name }}
+                                {% endfor %}
+                                {% endif %}
+                            </h4>
+                            <p class="project__description--para">
+                                {{ project.description }}
+                            </p>
+                            <div class="project__description--links">
+                                <a href="{{ project.github_link }}" target="_blank" class="project__description--link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                {% if project.demo_link %}
+                                <a href="{{ project.demo_link }}" target="_blank" class="project__description--link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+            <h3 class="section__learn-more"> <span class="text--purple">all projects</span> <a href="{% url 'projects' %}">here</a>.</h3>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

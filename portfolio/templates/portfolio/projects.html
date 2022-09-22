@@ -1,0 +1,63 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'portfolio/css/home-styles.css' %}"/>
+<link rel="stylesheet" href="{% static 'portfolio/css/projects-styles.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+
+<section id="projects">
+    <div class="container">
+        <div class="row">
+            <h2 class="section__title">Enjoy my <span class="text--purple">projects</span> 😉</h2>
+            <p class="section__subtitle">I try to write clean backend code and semantic html containing my websites in a nice design. I put emphasis on the development and increasing expansion of my projects.</p>
+                <div class="project__filters">
+                    <span class="project__item active" data-filter='all'>All</span>
+                    <span class="project__item" data-filter='.django'>Django</span>
+                    <span class="project__item" data-filter='.flask'>Flask</span>
+                    <span class="project__item" data-filter='.fastapi'>FastAPI</span>
+                </div>
+             <div class="project__list">
+            <ul class="grid">
+            {% for project in projects %}
+                <li class="project mix {% if project.technologies %}{% for technology in project.technologies.all %}{{ technology.name|lower }} {% endfor %}{% endif %}">
+
+                    <div class="project__wrapper">
+                        <img src="{{ project.image.url }}" class="project__img" alt="{{ project.title }} Demo">
+                        <div class="project__description">
+                            <h3 class="project__description--title">{{ project.title }}</h3>
+                            <h4 class="project__description--sub-title">
+                                {% if project.technologies %}
+                                {% for technology in project.technologies.all %}
+                                {{ technology.name }}
+                                {% endfor %}
+                                {% endif %}
+                            </h4>
+                            <p class="project__description--para">
+                                {{ project.description }}
+                            </p>
+                            <div class="project__description--links">
+                                <a href="{{ project.github_link }}" target="_blank" class="project__description--link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                {% if project.demo_link %}
+                                <a href="{{ project.demo_link }}" target="_blank" class="project__description--link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="{% static 'portfolio/js/mixitup.min.js' %}"></script>
+<script src="{% static 'portfolio/js/mix_init.js' %}"></script>
+{% endblock %}
