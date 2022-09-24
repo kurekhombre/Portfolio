@@ -33,7 +33,7 @@ section:nth-child(odd) {
 }
 
 .about-me--section {
-    margin-bottom: 80px;
+    margin: 0 20px 80px;
 }
 
 .about__me__sub {
@@ -209,7 +209,7 @@ section:nth-child(odd) {
 }
 
 .skill-box p {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .skill-title {
