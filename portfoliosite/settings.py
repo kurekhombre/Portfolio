@@ -32,6 +32,7 @@ CSRF_TRUSTED_ORIGINS = ['https://*.kurek.up.railway.app/', 'https://*.127.0.0.1'
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
