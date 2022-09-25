@@ -15,7 +15,7 @@ def about(request):
 
 
 def projects(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('-added')
     return render(request, 'portfolio/projects.html', {
       'projects': projects
     })
