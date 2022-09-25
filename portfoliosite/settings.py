@@ -32,6 +32,7 @@ CSRF_TRUSTED_ORIGINS = ['https://*.kurek.up.railway.app/', 'https://*.127.0.0.1'
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,17 +123,24 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # MEDIA
-MEDIA_ROOT = BASE_DIR / "uploads"
 MEDIA_URL = "/uploads/"
+MEDIA_ROOT = BASE_DIR / "uploads"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = 'AKIA2TCHKZP5ZTC35LHM'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'kurek-portfolio'
+AWS_QUERYSTRING_AUTH = False
