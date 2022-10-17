@@ -26,7 +26,7 @@
                 <li class="project mix {% if project.technologies %}{% for technology in project.technologies.all %}{{ technology.name|lower }} {% endfor %}{% endif %}">
 
                     <div class="project__wrapper">
-                        <img src="{{ project.image.url }}" class="project__img" alt="{{ project.title }} Demo">
+                        <img src="{{ project.image }}" class="project__img" alt="{{ project.title }} Demo">
                         <div class="project__description">
                             <h3 class="project__description--title">{{ project.title }}</h3>
                             <h4 class="project__description--sub-title">
