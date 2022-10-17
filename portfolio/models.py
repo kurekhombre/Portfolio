@@ -8,7 +8,8 @@ class Project(models.Model):
     description = models.CharField(max_length=300)
     github_link = models.URLField(null=True, blank=True)
     live_link = models.URLField(null=True, blank=True)
-    image = models.ImageField(upload_to='projects/')
+    # image = models.ImageField(upload_to='projects/')
+    image = models.URLField(max_length=300, blank=True, null=True)
     technologies = models.ManyToManyField('Technology')
     added = models.DateTimeField(auto_created=True, auto_now_add=True, null=True)
 
