@@ -83,9 +83,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'oi9FsF1LlPEwpNFJhaXd',
-        'HOST': 'containers-us-west-32.railway.app',
-        'PORT': '7345',
+        'PASSWORD': 'ruK3n9pTchZJhp18jj0Y',
+        'HOST': 'containers-us-west-110.railway.app',
+        'PORT': '5803',
     }
 }
 
@@ -139,8 +139,3 @@ MEDIA_ROOT = BASE_DIR / "uploads"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#
-# AWS_ACCESS_KEY_ID = 'AKIA2TCHKZP5ZTC35LHM'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'kurek-portfolio'
-# AWS_QUERYSTRING_AUTH = False
