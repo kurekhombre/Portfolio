@@ -85,6 +85,7 @@ DATABASES = {
         'USER': 'qqnpjfuc',
         'PASSWORD': config('DATABASE_PASSWORD'),
         'HOST': 'hattie.db.elephantsql.com',
+        'PORT': '5432',
     }
 }
 
